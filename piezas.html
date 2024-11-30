@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Prácticas de FHiC - B6</title> 
+  </head>
+  
+  <body> 
+
+    <header>
+      <div class="header-top">
+          <a href="index.html" title="Página de inicio">
+              <img src="img/logoKingChessPNG.png" width="75" height="75" alt="Logo" id="logo">
+          </a>
+          <div id="linksContainer">
+              <a href="piezas.html" title="Página de Piezas" class="link">Piezas</a>
+              <a href="jugadas.html" title="Página de Jugadas" class="link">Jugadas</a>
+              <a href="inicioPartida.html" title="Página de Inicio de partida" class="link">Inicio de partida</a>
+              <a href="mitadPartida.html" title="Página de Medio juego" class="link">Medio juego</a>
+              <a href="finalPartida.html" title="Página de Final de partida" class="link">Final de partida</a>
+              <a href="contacto.html" title="Página de Contacto" class="link">Contacto</a>
+          </div>
+      </div>
+      <ul class="breadcrumb" id="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="piezas.html">Piezas</a></li>
+      </ul>
+    </header>
+      
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1" id="miembros">
+              <h2>Piezas</h2>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                    <img src="img/ch_pawn.png" alt="Peon" class="img-fluid" width="80" height="80" id="pawn" onclick="cambiarContenido('pawn')">
+                  </div>
+              </div>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                    <img src="img/ch_knight.png" alt="Caballo" class="img-fluid" width="80" height="80" id="knight" onclick="cambiarContenido('knight')">  
+                  </div>
+              </div>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                    <img src="img/ch_bishop.png" alt="Alfil" class="img-fluid" width="80" height="80" id="bishop" onclick="cambiarContenido('bishop')">
+                  </div>
+              </div>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                      <img src="img/ch_rook.png" alt="Torre" class="img-fluid" width="80" height="80" id="rook" onclick="cambiarContenido('rook')">
+                  </div>
+              </div>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                      <img src="img/ch_queen.png" alt="Dama" class="img-fluid" width="80" height="80" id="queen" onclick="cambiarContenido('queen')">
+                  </div>
+              </div>
+              <div class="row" id="row_pieces">
+                  <div class="col">
+                    <img src="img/ch_king.png" alt="Rey" class="img-fluid" width="80" height="80" id="king" onclick="cambiarContenido('king')"> 
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-11" id="proyecto">
+                <div class="row">
+                    <div class="col-lg-6">
+                      <img src="img/piezasPeonIMG.png" alt="tablero" class="img-fluid" id="board_img">
+                    </div>
+                    <div class="col-lg-6">
+                      <div id="info">
+                        <h2>Peón</h2>
+                        <p>- Avance normal: El peón puede moverse hacia adelante una casilla en cada turno, siempre en dirección hacia el lado opuesto del tablero. Por ejemplo, si eres las piezas blancas, el peón se moverá hacia adelante en dirección a las piezas negras.</p>
+                        <p>- Avance doble inicial: Cuando un peón aún no ha sido movido desde su posición inicial en el tablero, tiene la opción de avanzar dos casillas en lugar de una en su primer movimiento. Esto es una excepción al movimiento normal y solo se aplica en el turno inicial de cada peón.</p>
+                        <p>- Movimiento en diagonal para capturar: El peón no puede capturar oponentes directamente en su avance normal. Sin embargo, captura diagonalmente. Esto significa que si hay una pieza enemiga ubicada una casilla adelante y a la derecha o a la izquierda del peón, este puede capturarla moviéndose diagonalmente en esa dirección.</p>
+                        <p>- Sin retroceso: Una vez que un peón avanza, no puede retroceder. Esto significa que una vez que un peón se ha movido hacia adelante, solo puede seguir avanzando o capturar en diagonal, no puede volver a una casilla anterior.</p>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>  
+    
+    <footer class = "footer">
+      <p>Copyright &copy; FHiC 23-24 - KingChess</p>
+    </footer>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      function cambiarContenido(img_id) {
+        var piece_img = document.getElementById(img_id);
+        var board_img = document.getElementById("board_img");
+        var text = document.getElementById("info");
+      
+        if (piece_img.src.endsWith("img/ch_pawn.png")) {
+          board_img.src = "img/piezasPeonIMG.png";
+          text.innerHTML = '<h2>Peón</h2>' +
+                 '<p>- Avance normal: El peón puede moverse hacia adelante una casilla en cada turno, siempre en dirección hacia el lado opuesto del tablero. ' +
+                 'Por ejemplo, si eres las piezas blancas, el peón se moverá hacia adelante en dirección a las piezas negras.</p>' +
+                 '<p>- Avance doble inicial: Cuando un peón aún no ha sido movido ' +
+                 'desde su posición inicial en el tablero, tiene la opción de avanzar dos casillas en lugar de una en su primer movimiento. Esto es una excepción al movimiento normal y ' +
+                 'solo se aplica en el turno inicial de cada peón.</p>' +
+                 '<p>- Movimiento en diagonal para capturar: El peón no puede capturar oponentes directamente en su avance normal. ' +
+                 'Sin embargo, captura diagonalmente. Esto significa que si hay una pieza enemiga ubicada una casilla adelante y a la derecha o a la izquierda del peón, este puede ' +
+                 'capturarla moviéndose diagonalmente en esa dirección.</p>' +
+                 '<p>- Sin retroceso: Una vez que un peón avanza, no puede retroceder. Esto significa que una vez que un peón se ha ' +
+                 'movido hacia adelante, solo puede seguir avanzando o capturar en diagonal, no puede volver a una casilla anterior.</p>';
+        }
+        else if (piece_img.src.endsWith("ch_king.png")) {
+          board_img.src = "img/piezasReyIMG.png";
+          text.innerHTML = '<h2>Rey</h2>' +
+                 '<p>- Movimiento limitado: El rey se mueve una casilla en cualquier dirección: horizontal, vertical o diagonal. Sin embargo, solo puede moverse a una casilla a la vez.</p>' +
+                 '<p>- Importancia de protección: Proteger al rey es una prioridad clave en el ajedrez. Si el rey es capturado (jaque mate), el juego termina, por lo que es crucial mantenerlo seguro en todo momento.</p>' +
+                 '<p>- Movimiento especial: El rey puede realizar un movimiento especial llamado enroque, en el que se mueve dos casillas hacia la torre en una dirección horizontal y luego la torre se mueve al lado del rey. El enroque es una jugada defensiva clave que ayuda a proteger al rey y activar la torre.</p>' +
+                 '<p>- Limitaciones al enroque: Para realizar el enroque, el rey y la torre no deben haberse movido previamente en el juego, no debe haber ninguna pieza entre el rey y la torre, y el rey no puede estar en jaque ni pasar por casillas amenazadas por piezas enemigas.</p>';
+        }
+        else if (piece_img.src.endsWith("ch_knight.png")) {
+          board_img.src = "img/piezasCaballoIMG.png";
+          text.innerHTML = '<h2>Caballo</h2>' +
+                 '<p>- Movimiento en L: El caballo se mueve en forma de "L". Puede avanzar dos casillas en una dirección y luego una en una dirección perpendicular, o una casilla en una dirección y luego dos en una dirección perpendicular.</p>' +
+                 '<p>- Salto sobre otras piezas: El caballo puede saltar sobre otras piezas en el tablero. Esto significa que puede moverse a una casilla ocupada por una pieza y capturarla si es una pieza enemiga.</p>' +
+                 '<p>- Única pieza que puede saltar: El caballo es la única pieza en el ajedrez que puede saltar sobre otras piezas. Esto le permite sortear bloqueos y atacar piezas que están protegidas por otras.</p>';
+        }
+        else if (piece_img.src.endsWith("ch_bishop.png")) {
+          board_img.src = "img/piezasAlfilIMG.png";
+          text.innerHTML = '<h2>Alfil</h2>' +
+                 '<p>- Movimiento diagonal: El alfil se mueve diagonalmente a lo largo del tablero. Puede avanzar cualquier cantidad de casillas en cualquier dirección diagonal, siempre que no haya ninguna pieza bloqueándolo en su camino.</p>' +
+                 '<p>- Restricciones de color: A diferencia de otras piezas que pueden moverse libremente por el tablero sin importar el color de la casilla, el alfil está restringido a las casillas de su propio color. Esto significa que un alfil en un cuadrado blanco solo puede moverse en diagonales blancas, y un alfil en un cuadrado negro solo puede moverse en diagonales negras.</p>' +
+                 '<p>- Complemento del otro alfil: En un tablero de ajedrez estándar, hay dos alfiles para cada jugador, uno en casillas blancas y otro en casillas negras. Se complementan entre sí, cubriendo todas las diagonales del tablero entre los dos. Esto significa que juntos pueden controlar una gran parte del tablero.</p>' +
+                 '<p>- Importancia táctica: Debido a su capacidad para moverse a lo largo de diagonales, los alfiles pueden ser piezas tácticas muy poderosas en el ajedrez. Pueden atacar múltiples piezas a la vez y pueden tener un impacto significativo en el control del centro del tablero y la actividad de las piezas.</p>';
+        }
+        else if (piece_img.src.endsWith("ch_rook.png")) {
+          board_img.src = "img/piezasTorreIMG.png";
+          text.innerHTML = '<h2>Torre</h2>' +
+                 '<p>- Movimiento horizontal y vertical: La torre se mueve a lo largo de filas y columnas en el tablero. Puede avanzar cualquier cantidad de casillas en línea recta horizontalmente o verticalmente, siempre que no haya ninguna pieza bloqueándola en su camino.</p>' +
+                 '<p>- Importancia en la apertura y el final: La torre es una pieza clave tanto en la apertura como en el final del juego. En la apertura, las torres se conectan entre sí a lo largo de las filas o columnas abiertas para controlar el centro del tablero. En el final, las torres pueden ser muy poderosas al controlar filas o columnas enteras y presionar contra el rey enemigo.</p>' +
+                 '<p>- Puede realizar el enroque: La torre es una de las piezas que participa en el movimiento especial llamado enroque. Durante el enroque, el rey y una de las torres del mismo color se mueven simultáneamente para proteger al rey y activar a la otra torre.</p>' +
+                 '<p>- Complemento de la otra torre: En un tablero de ajedrez estándar, hay dos torres para cada jugador. Se complementan entre sí, cubriendo las filas y columnas del tablero entre las dos. Juntas, pueden controlar áreas importantes del tablero y coordinarse para lanzar ataques poderosos.</p>';
+        }
+        else if (piece_img.src.endsWith("ch_queen.png")) {
+          board_img.src = "img/piezasDamaIMG.png";
+          text.innerHTML = '<h2>Dama</h2>' +
+                 '<p>- Movimiento horizontal, vertical y diagonal: La dama es la pieza más poderosa en el ajedrez y puede moverse en línea recta en cualquier dirección en el tablero. Esto incluye moverse horizontalmente, verticalmente y en diagonal, siempre que no haya ninguna pieza bloqueándola en su camino.</p>' +
+                 '<p>- Importancia táctica y estratégica: La dama es una pieza muy versátil y puede desempeñar un papel importante tanto en tácticas agresivas como en estrategias posicionales. Puede lanzar ataques poderosos y rápidos, así como controlar áreas clave del tablero para ejercer presión sobre el oponente.</p>' +
+                 '<p>- Combinación de torre y alfil: La dama combina los movimientos de la torre y el alfil en una sola pieza. Puede moverse a lo largo de filas y columnas como una torre, así como a lo largo de diagonales como un alfil. Esto le otorga una gran capacidad de movimiento y la convierte en una pieza dominante en el juego medio y tardío.</p>' +
+                 '<p>- Dama contra dos torres: En algunas posiciones, una dama puede ser más poderosa que dos torres debido a su capacidad para moverse en todas las direcciones. Sin embargo, las dos torres juntas también pueden ser muy poderosas y pueden trabajar en conjunto para lanzar ataques coordinados y controlar áreas críticas del tablero.</p>';
+        }
+      
+        texto.style.display = "block";
+      }
+      </script>
+
+    
+  </body>
+</html>

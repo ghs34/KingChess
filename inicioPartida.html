@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Prácticas de FHiC - B6</title>
+  </head>
+  <body onload="selectPlay(0)">
+    
+    <header>
+      <div class="header-top">
+          <a href="index.html" title="Página de inicio">
+              <img src="img/logoKingChessPNG.png" width="75" height="75" alt="Logo" id="logo">
+          </a>
+          <div id="linksContainer">
+              <a href="piezas.html" title="Página de Piezas" class="link">Piezas</a>
+              <a href="jugadas.html" title="Página de Jugadas" class="link">Jugadas</a>
+              <a href="inicioPartida.html" title="Página de Inicio de partida" class="link">Inicio de partida</a>
+              <a href="mitadPartida.html" title="Página de Medio juego" class="link">Medio juego</a>
+              <a href="finalPartida.html" title="Página de Final de partida" class="link">Final de partida</a>
+              <a href="contacto.html" title="Página de Contacto" class="link">Contacto</a>
+          </div>
+      </div>
+      <ul class="breadcrumb" id="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fasesPartida.html">Fases Partida</a></li>
+        <li><a href="inicioPartida.html">Inicio de partida</a></li>
+      </ul>
+    </header>
+
+    <main id="main_inicioPartida">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div id="inicioPartidaTablero">
+                        <div class="row">
+                            <div id="moveStatus"></div>
+                        </div>
+                        <div class="row">
+                            <img src="/jugadasIMG/atrasFlecha.png" id="prevBtn" onclick="prevMove()" alt="Anterior Movimiento" height="40" width="40">
+                            <img src="/jugadasIMG/adelanteFlecha.png" id="nextBtn" onclick="nextMove()" alt="Siguiente Movimiento" height="40" width="40">
+                        </div>
+                        <div class="row">
+                            <img id="board" src="" alt="Tablero de ajedrez" width="500" height="500">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2 id="tituloSeccion"></h2>
+                    <div id="explanation"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="seccionesInicioPartidaLista">
+                        <ul id="moveList">
+                          <li onclick="selectPlay(0)">Principios básicos de la apertura</li>
+                          <li onclick="selectPlay(1)">Apertura Española</li>
+                          <li onclick="selectPlay(2)">Sistema Londres</li>
+                          <li onclick="selectPlay(3)">Gambito de Dama</li>
+                          <li onclick="selectPlay(4)">Defensa Francesa</li>
+                          <li onclick="selectPlay(5)">Defensa Escandinava</li>
+                          <li onclick="selectPlay(6)">Defensa Siciliana</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="inicioPartidaScript.js"></script>
+    </main>
+
+    <footer class = "footer">
+      <p>Copyright &copy; FHiC 23-24 - KingChess</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+
+  </body>
+</html>

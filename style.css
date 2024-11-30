@@ -1,0 +1,483 @@
+html{
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgb(48, 46, 43);
+}
+
+body{
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:rgb(48, 46, 43);
+    position: relative;
+    padding-bottom: 5em;
+    min-height: 100vh;
+}
+
+/*Links de encabezado en verde*/
+#linksContainer a {
+    color: #00ff6a;
+}
+
+/*Breadcrumb de encabezado en verde*/
+#breadcrumb a {
+    color: #00ff6a;
+}
+
+h1{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+h2{
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+p{
+    color: white;
+    font-size:medium;
+}
+
+li{
+    color: white;
+}
+
+a{
+    color:aqua;
+}
+
+a:hover{
+    color:bisque;
+}
+
+header{
+    background-color: rgb(130, 126, 126)
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+#logo {
+    margin-right: 20px;
+}
+#linksContainer .link {
+    margin-right: 15px;
+    text-decoration: none;
+}
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgb(130, 126, 126);
+    border-top: 1px solid #e7e7e7;
+    list-style: none;
+    margin-left: 0;
+}
+.breadcrumb li {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: aqua;
+}
+.breadcrumb a:hover {
+    color: bisque;
+}
+.breadcrumb li::after {
+    content: ">";
+    margin-left: 5px;
+}
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+footer {
+    background-color: rgb(130, 126, 126);
+    padding: 1em 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#titulo > h1{
+    margin-top: 10px;
+}
+
+
+#headerContainer {
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto; 
+}
+
+.link {
+    margin: 0 10px; 
+}
+
+#titulo, main > #miembros, main > #proyecto > h2, main > #contacto > h2,  main > #proyecto > #ajedrez{
+    text-align: center;
+}
+
+#contacto, #proyecto, #miembros {
+    border-color: white;
+    border: 1px solid hsl(0, 0%, 100%); 
+    text-align: justify;
+}
+
+#contacto > h2, #proyecto > h2, #miembros > h2{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#miembros > #listaMiembros > #raul, #miembros > #listaMiembros > #gleb, #miembros > #listaMiembros > #victor, #miembros > #listaMiembros > #nacho{
+    margin-bottom: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+nav > ul, nav > img{
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+/* Ajustar los márgenes, alineación, borde y texto centrado para los divs dentro de #main_miembros */
+#main_miembros #raul,
+#main_miembros #gleb,
+#main_miembros #victor,
+#main_miembros #nacho {
+    margin: 10px;
+    align-items: center;
+    border: 1px solid hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+/* Ajustar el margen superior para los elementos p y h2 dentro de los divs de #main_miembros */
+#main_miembros #raul p, 
+#main_miembros #raul h2,
+#main_miembros #gleb p, 
+#main_miembros #gleb h2,
+#main_miembros #victor p, 
+#main_miembros #victor h2,
+#main_miembros #nacho p, 
+#main_miembros #nacho h2 {
+    margin-top: 15px;
+}
+
+#main_miembros #raul h4,
+#main_miembros #gleb h4,
+#main_miembros #victor h4,
+#main_miembros #nacho h4 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#btnEnviar {
+    background-color: green; /* Color de fondo verde */
+    border-color: green; /* Color del borde verde */
+    color: white; /* Color del texto blanco */
+}
+
+/* Opcional: cambiar el color de fondo al pasar el ratón sobre el botón */
+#btnEnviar:hover {
+    background-color: darkgreen; /* Un verde más oscuro para el hover */
+    border-color: darkgreen;
+}
+
+#btnAprender{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+
+#aprenderBTN{
+    margin-top: 15px;
+}
+
+#btnMiembros{
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+#miembrosBTN{
+    margin-top: 15px;
+}
+
+#botones1{
+    align-content: center;
+}
+
+#contactoBTN{
+    margin-top: 15px;
+}
+
+#h2_bienvenida{
+    text-align: center;
+    margin-top: 35px;
+}
+
+#bienvenida > p, #bienvenida > li, #bienvenida > ul{
+    font-size: 18px;
+}
+
+#bienvenida p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+/* proyecto y principios de diseño*/
+#main_proyecto{
+    align-items: center;
+    border: 1px solid hsl(0, 0%, 100%); 
+    text-align: center;
+}
+
+/* CONTACTO */
+
+#main_contacto > div {
+    border: 1px solid hsl(0, 0%, 100%); 
+    color: white; 
+    padding-bottom: 20px;  
+}
+
+
+/* APRENDER */
+#main_aprender >.container-fluid{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.btn-main{
+    border: 3px solid #03cc57;
+    overflow: hidden;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-main::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color:  #03cc57;
+    left: 0;
+    top: -200%;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn-main:hover:before{
+    top: 0;
+    border-radius: 0%;
+}
+
+/*GENERAL*/
+
+.btn_circular {
+    position: relative;
+    padding: 80px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 5000px;
+    text-align: center;
+}
+
+/*Clase Piezas*/
+
+/* Estilos para centrar las imágenes de las piezas */
+#miembros .row {
+    justify-content: center; /* Centra horizontalmente los elementos dentro de las filas */
+    margin-top: 50px;
+}
+#miembros .col {
+    text-align: center; /* Centra el contenido dentro de las columnas */
+}
+
+
+/*Margenes a la explicacion de la derecha de cada pieza*/
+#info {
+    margin-right: 20px; 
+    margin-top: 20px; 
+}
+
+#board_img{
+    margin-top: 23px; 
+}
+
+#row_pieces > div > img:hover{
+    border: 2px solid white; /* Agregamos un borde blanco alrededor de la imagen */
+    cursor: pointer; /* Cambiamos el cursor a una mano */
+}
+
+/*Jugadas */
+
+#main_jugadas >.container-fluid{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+#tituloJugada {
+    margin-left: 31px;
+}
+
+#jugadasTablero .row {
+    justify-content: center; /* Centra horizontalmente los elementos dentro de las filas */
+}
+
+#jugadasLista {
+    text-align: center;
+    margin-right: 100px;
+    overflow-y: auto; /* Agregamos el desbordamiento vertical */
+    max-height: 600px; /* Definimos una altura máxima para la lista */
+  }
+  
+#jugadasLista button {
+    margin: 5px;
+}
+  
+#jugadasLista ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Quitamos el margen para evitar espacios innecesarios */
+}
+  
+#jugadasLista ul li {
+    cursor: pointer;
+    padding: 10px; /* Agregamos un relleno para mejorar la apariencia */
+    text-align: left;
+  }
+
+  /* Estilo para cuando se coloca el cursor sobre las imágenes de flechas */
+#jugadasTablero img:hover {
+    border: 2px solid white; /* Agregamos un borde blanco alrededor de la imagen */
+    cursor: pointer; /* Cambiamos el cursor a una mano */
+  }
+
+#jugadasLista ul li {
+    cursor: pointer; /* Cambiar el cursor al pasar sobre los elementos de la lista */
+    padding: 10px; /* Espaciado interno para una apariencia más limpia */
+    transition: background-color 0.3s; /* Agregar transición de color de fondo para un efecto suave */
+}
+  
+  /* Estilo para cuando se coloca el cursor sobre las jugadas en la lista */
+#jugadasLista ul li:hover {
+    background-color: #698328; /* Cambiamos el color de fondo cuando se coloca el cursor */
+}
+
+#explanation{
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+  
+/*Fases de la partida*/
+#inicioPartida{
+
+}
+
+#btnInicio, #btnMitad, #btnFinal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+/* InicioPartida */
+#main_inicioPartida >.container-fluid{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+#inicioPartidaTablero .row {
+    justify-content: center; /* Centra horizontalmente los elementos dentro de las filas */
+}
+
+#seccionesInicioPartidaLista {
+    text-align: center;
+    margin-right: 100px;
+    overflow-y: auto; /* Agregamos el desbordamiento vertical */
+    max-height: 600px; /* Definimos una altura máxima para la lista */
+  }
+  
+#seccionesInicioPartidaLista button {
+    margin: 5px;
+}
+  
+#seccionesInicioPartidaLista ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Quitamos el margen para evitar espacios innecesarios */
+}
+  
+#seccionesInicioPartidaLista ul li {
+    cursor: pointer;
+    padding: 10px; /* Agregamos un relleno para mejorar la apariencia */
+  }
+
+  /* Estilo para cuando se coloca el cursor sobre las imágenes de flechas */
+#inicioPartidaTablero img:hover {
+    border: 2px solid white; /* Agregamos un borde blanco alrededor de la imagen */
+    cursor: pointer; /* Cambiamos el cursor a una mano */
+  }
+  
+  /* Estilo para cuando se coloca el cursor sobre las jugadas en la lista */
+#seccionesInicioPartidaLista ul li:hover {
+    background-color: #698328; /* Cambiamos el color de fondo cuando se coloca el cursor */
+}
+
+#explanation{
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+#tituloSeccion {
+    margin-left: 31px;
+}
+
+.highlight {
+    background-color: #698328; /* Amarillo brillante */
+    /*color: black; */ /* Color del texto para asegurar que sea legible sobre el fondo amarillo */
+    padding: 5px;
+    border-radius: 5px;
+}

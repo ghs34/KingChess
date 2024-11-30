@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Prácticas de FHiC - B6</title>
+  </head>
+  <body>
+    
+    <header>
+      <div class="header-top">
+          <a href="index.html" title="Página de inicio">
+              <img src="img/logoKingChessPNG.png" width="75" height="75" alt="Logo" id="logo">
+          </a>
+          <div id="linksContainer">
+              <a href="piezas.html" title="Página de Piezas" class="link">Piezas</a>
+              <a href="jugadas.html" title="Página de Jugadas" class="link">Jugadas</a>
+              <a href="inicioPartida.html" title="Página de Inicio de partida" class="link">Inicio de partida</a>
+              <a href="mitadPartida.html" title="Página de Medio juego" class="link">Medio juego</a>
+              <a href="finalPartida.html" title="Página de Final de partida" class="link">Final de partida</a>
+              <a href="contacto.html" title="Página de Contacto" class="link">Contacto</a>
+          </div>
+      </div>
+      <ul class="breadcrumb" id="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </header>
+
+    <div id = "titulo">
+        <h1>¡Danos tu opinión!</h1> 
+        <h2>Nos encantaría saber qué opinas de nuestra web</h2> 
+    </div>
+
+    <main id="main_contacto">
+    <div class="container-fluid">
+        <div class="row">
+            <form class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <label for="InputName">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required><br>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="InputLastName">Apellidos</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control" required><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="InputEmail">Correo</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="nombre@ejemplo.com" required><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="InputOpinion">Reseña</label>
+                        <textarea id="opinion" name="opinion" placeholder="" class="form-control" rows="4" required></textarea><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="InputValoration">Valoración </label>
+                        <select id="valoracion" name="valoracion" class="form-select" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id = "btnEnviar" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="container-fluid" id = "main_miembros">
+                    <div class="row"  id = "filaMiembros">
+                    
+                      <div class="row" >
+                        <div class="col-lg" id="raul">
+                            <h4>Raúl Gómez Canales</h4>
+                            <img src="img/raulIMG.png" alt="PFP Raul" width="150" height="150">
+                            <p>Estudiante de ingeniería informática en la prestigiosa Universidad de Barcelona, 
+                              amante del ajedrez y de la música latina.
+                            </p>
+                          </div>
+                
+                          <div class="col-lg" id="gleb">
+                            <h4>Hlieb Sydorenko</h4>
+                            <img src="img/glebIMG.png" alt="PFP Gleb" width="150" height="150">
+                            <p>Maestro Fide de ajedrez desde los 16 años. Ha estado involucrado varios años en 
+                              el mundo de la enseñanza de este deporte.</p> 
+                          </div>
+                      </div>
+                      
+            
+                      <div class="row" >
+                        <div class="col-lg" id="victor">
+                          <h4>Víctor Parrilla Olivares</h4> 
+                          <img src="img/victorIMG.png" alt="PFP Victor" width="150" height="150">
+                          <p>Programador web especializado en online learning y aficionado al ajedrez desde siempre.
+                          </p>
+                        </div>
+            
+                        <div class="col-lg" id="nacho">
+                          <h4>Nacho Rivera Álvaro</h4>
+                          <img src="img/nachoIMG.png" alt="PFP Nacho" width="150" height="150">
+                          <p>Gran apasionado de la informática con experiencia en desarrollo web.</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                <!-- <img src="img/contacto.png" alt="Descripción de la imagen" height="350" width="400"> -->
+            </div>
+        </div>
+    </div>
+</main>
+    
+    
+
+    <footer class = "footer">
+      <p>Copyright &copy; FHiC 23-24 - KingChess</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      // Función que se ejecutará al enviar el formulario
+      function enviar(event) {
+          event.preventDefault(); // Prevenir el envío del formulario
+          alert("Su opinión ha sido enviada con éxito. Gracias por su colaboración."); // Mensaje de alerta para indicar que el formulario no se enviará
+      }
+      
+      // Añadir el manejador de eventos cuando el documento esté completamente cargado
+      document.addEventListener("DOMContentLoaded", function() {
+          var form = document.querySelector("form");
+          form.addEventListener("submit", enviar);
+      });
+    </script>
+
+  </body>
+</html>
